@@ -1,0 +1,6 @@
+# numbers is an array: [0,1,2,3,4,5]
+# len(numbers) = 6
+# range(len(numbers)) = [0,1,2,3,4,5]
+# xrange(len(numbers)) = xrange(6)
+#range()生成一个数组
+#xrange()生成一个生成器
