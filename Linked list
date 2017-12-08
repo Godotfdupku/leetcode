@@ -1,0 +1,78 @@
+# Linked list with python
+# In computer science, a linked list is a linear collection of data elements, in which linear order is not given by their physical #placement in memory. Instead, each element points to the next. It is a data structure consisting of a group of nodes which together #represent a sequence. Under the simplest form, each node is composed of data and a reference (in other words, a link) to the next node in #the sequence. This structure allows for efficient insertion or removal of elements from any position in the sequence during iteration. #More complex variants add additional links, allowing efficient insertion or removal from arbitrary element references.
+#A linked list can be created by C++ and Pointer, can also be created by python and Node structure
+Class Node():
+  def _init_(self, value, next = none):
+    self.value = value
+    self.next = next
+def Creatlist(n):
+  if n <= 0:
+    return False
+  if n == 1:
+    return Node(1)
+  else:
+    root = Node(1)
+    temp = root
+    for i in range(2,n+1):
+      temp.next = Node(i)
+      temp = temp.next
+    return root
+def Printlist(root):
+  p = root
+  while p!=None:
+    print p.value
+    p = p.next
+def Listlen(root):
+  p = root
+  c = 0
+  while p! = None:
+    c += 1
+    p = p.next
+  return c
+def Insert(root, n):
+  if n < 1 or n > Listlen(root):
+    return root
+  else:
+    p = root
+    for i in range(1, n-1):
+      p = p.next
+    a = raw_input("Enter a value:")
+    t =  Node(value = a)
+    t.next = p.next
+    p.next = t
+    return root
+def Dellist(root, n):
+  if n < 1 or n > Listlen(root):
+    return root
+  
+  elif n == 1:
+    root = root.next
+  else:
+    p = root
+    for i in range(1, n-1):
+      p = p.next
+    q = p.next
+    p.next = q.next
+    return root
+def main():  
+    print "Create a linklist"  
+    head=Creatlist(7)  
+    printlist(head)  
+    print  
+    print "___________________________"  
+  
+    n1=raw_input("Enter the index to insert")  
+    n1=int(n1)  
+    insert(head,n1)  
+    printlist(head)  
+    print  
+    print "___________________________"  
+  
+    n2=raw_input("Enter the index to delete")  
+    n2=int(n2)  
+    dellist(head,n2)  
+    printlist(head)  
+  
+  
+if __name__=='__main__':  main()   # 主函数调用        
+      
